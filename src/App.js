@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import Todo from "./Todo";
 
 // Main Component
 function App() {
   // used destructuring
   // todos = state, setTodos = them used method to update the state
   // inital data will be an array of objects
-  const [todo, setTodos] = useState([
+  const [todos, setTodos] = useState([
     {
       text: "Lorem ipsum 1",
       isCompleted: false,
@@ -23,6 +24,16 @@ function App() {
       isCompleted: false,
     },
   ]);
+  return (
+    <div className="app">
+      <div className="todo-list">
+        {/* Map throught todos from State  */}
+        {todos.map((todo, index) => (
+          <Todo key={index} index={index} todo={todo} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default App;
