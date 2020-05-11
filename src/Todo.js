@@ -1,6 +1,6 @@
 import React from "react";
 
-function Todo({ todo, index, completeTodo }) {
+function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
     <div
       style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
@@ -10,7 +10,10 @@ function Todo({ todo, index, completeTodo }) {
       {/* CompleteTodo passed as prop 
      Event Listener onClick - arrow function to call completeTodo
      which will take in the index to know exactly which one is completed */}
-      <button onClick={() => completeTodo(index)}>✓</button>
+      <div className="buttons-wrap">
+        <button onClick={() => completeTodo(index)}>✓</button>
+        <button onClick={() => removeTodo(index)}>✘</button>
+      </div>
     </div>
   );
 }
