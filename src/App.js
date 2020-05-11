@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
+import "./App.css";
 
 // Main Component
 function App() {
@@ -26,6 +27,7 @@ function App() {
   ]);
   return (
     <div className="app">
+      <h1 className="title">ToDo List:</h1>
       <div className="todo-list">
         {/* Map throught todos from State  */}
         {todos.map((todo, index) => (
