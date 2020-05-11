@@ -34,13 +34,27 @@ function App() {
     // update de state - passed new array
     setTodos(newTodos);
   };
+
+  const completeTodo = (index) => {
+    //an array with current todos - use spread op
+    const newTodos = [...todos];
+    //mark as completed
+    newTodos[index].isCompleted = true;
+    // set state
+    setTodos(newTodos);
+  };
   return (
     <div className="app">
       <h1 className="title">ToDo List:</h1>
       <div className="todo-list">
         {/* Map throught todos from State  */}
         {todos.map((todo, index) => (
-          <Todo key={index} index={index} todo={todo} />
+          <Todo
+            key={index}
+            index={index}
+            todo={todo}
+            completeTodo={completeTodo}
+          />
         ))}
 
         {/* Display input Component  */}
