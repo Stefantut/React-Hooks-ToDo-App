@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
 import "./App.css";
+import TodoForm from "./TodoForm";
 
 // Main Component
 function App() {
@@ -25,6 +26,14 @@ function App() {
       isCompleted: false,
     },
   ]);
+
+  const addTodo = (text) => {
+    // used spread operator to copy everything from todos array
+    const newTodos = [...todos, { text }];
+
+    // update de state - passed new array
+    setTodos(newTodos);
+  };
   return (
     <div className="app">
       <h1 className="title">ToDo List:</h1>
@@ -33,6 +42,9 @@ function App() {
         {todos.map((todo, index) => (
           <Todo key={index} index={index} todo={todo} />
         ))}
+
+        {/* Display input Component  */}
+        <TodoForm addTodo={addTodo} />
       </div>
     </div>
   );
