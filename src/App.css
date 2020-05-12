@@ -3,10 +3,12 @@
   padding: 30px;
   height: 100vh;
 }
+
 .title {
   text-align: center;
   color: bisque;
 }
+
 .todo-list {
   max-width: 400px;
   background: firebrick;
@@ -51,7 +53,9 @@
   border: 1px solid black;
   color: green;
 }
-
+.buttons-wrap button:hover {
+  cursor: grab;
+}
 .buttons-wrap button:last-child {
   margin-right: 0px;
   color: red;
