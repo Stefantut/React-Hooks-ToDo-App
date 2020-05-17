@@ -10,19 +10,27 @@ function App() {
   // inital data will be an array of objects
   const [todos, setTodos] = useState([
     {
-      text: "Lorem ipsum 1",
+      text: "Buy Cheese",
       isCompleted: false,
     },
     {
-      text: "Lorem ipsum 2",
+      text: "Go for a walk",
       isCompleted: false,
     },
     {
-      text: "Lorem ipsum 3",
+      text: "Learn React",
       isCompleted: false,
     },
     {
-      text: "Lorem ipsum 4",
+      text: "Get a dog",
+      isCompleted: false,
+    },
+    {
+      text: "Go on a holiday",
+      isCompleted: false,
+    },
+    {
+      text: "Eat more fruits",
       isCompleted: false,
     },
   ]);
@@ -40,7 +48,7 @@ function App() {
     //an array with current todos - use spread op
     const newTodos = [...todos];
     //mark as completed
-    newTodos[index].isCompleted = true;
+    newTodos[index].isCompleted = !newTodos[index].isCompleted;
     // set state
     setTodos(newTodos);
   };
@@ -60,13 +68,14 @@ function App() {
       <h1 className="title">ToDo List:</h1>
       <div className="todo-list">
         {/* Map throught todos from State  */}
-        {todos.map((todo, index) => (
+        {todos.map((todo, index, isCompleted) => (
           <Todo
             key={index}
             index={index}
             todo={todo}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
+            isCompleted={isCompleted}
           />
         ))}
 

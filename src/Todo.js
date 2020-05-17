@@ -11,7 +11,9 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
      Event Listener onClick - arrow function to call completeTodo
      which will take in the index to know exactly which one is completed */}
       <div className="buttons-wrap">
-        <button onClick={() => completeTodo(index)}>✓</button>
+        <button onClick={() => completeTodo(index)}>
+          {todo.isCompleted ? "⚊" : "✓"}
+        </button>
         <button onClick={() => removeTodo(index)}>✘</button>
       </div>
     </div>
