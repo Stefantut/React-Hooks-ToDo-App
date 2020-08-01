@@ -68,14 +68,13 @@ function App() {
       <h1 className="title">ToDo List:</h1>
       <div className="todo-list">
         {/* Map throught todos from State  */}
-        {todos.map((todo, index, isCompleted) => (
+        {todos.map((todo, index) => (
           <Todo
             key={index}
             index={index}
             todo={todo}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
-            isCompleted={isCompleted}
           />
         ))}
 
