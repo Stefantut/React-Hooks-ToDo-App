@@ -72,7 +72,8 @@ function App() {
           <Todo
             key={index}
             index={index}
-            todo={todo}
+            text={todo.text}
+            isCompleted={todo.isCompleted}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
           />

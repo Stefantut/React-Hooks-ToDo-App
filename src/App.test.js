@@ -22,7 +22,7 @@ describe("Test for <App /> component", () => {
     expect(wrapper.find("div.todo-list")).toHaveLength(1);
   });
 
-  it("There is at least 1 todo task inside list", () => {
+  test("There is at least 1 todo task inside list", () => {
     expect(wrapper.find(Todo).length).toBeGreaterThan(1);
   });
 });
