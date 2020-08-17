@@ -3,7 +3,7 @@
 
 ![Preview Image](src/todo.jpg)
 
-# Simple ToDo List app Built using React Hooks and Jest/Enzyme for testing components.
+# Simple ToDo List app Built using React Hooks, Jest/Enzyme for testing components, and PropTypes.
 
 ## Available Scripts
 

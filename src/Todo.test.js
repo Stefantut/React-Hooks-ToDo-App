@@ -4,33 +4,6 @@ import Todo from "./Todo";
 
 const isCompleted = false;
 
-const todos = [
-  {
-    text: "Buy Cheese",
-    isCompleted: false,
-  },
-  {
-    text: "Go for a walk",
-    isCompleted: false,
-  },
-  {
-    text: "Learn React",
-    isCompleted: false,
-  },
-  {
-    text: "Get a dog",
-    isCompleted: false,
-  },
-  {
-    text: "Go on a holiday",
-    isCompleted: false,
-  },
-  {
-    text: "Eat more fruits",
-    isCompleted: false,
-  },
-];
-
 describe("<Todo>", () => {
   it("should be defined", () => {
     expect(Todo).toBeDefined();

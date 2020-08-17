@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
 import TodoForm from "./TodoForm";
+import PropTypes from "prop-types";
+
 import "./App.css";
 
 // Main Component
@@ -85,5 +87,9 @@ function App() {
     </div>
   );
 }
+
+App.propTypes = {
+  text: PropTypes.number,
+};
 
 export default App;
