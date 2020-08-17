@@ -9,9 +9,19 @@ describe("<Todo>", () => {
     expect(Todo).toBeDefined();
   });
 
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Todo isCompleted={isCompleted} />);
+  });
+
   it("should include a buttons wrap", () => {
-    const wrapper = shallow(<Todo isCompleted={isCompleted} />);
     const buttonsWrap = wrapper.find("div div");
     expect(buttonsWrap.exists());
+  });
+
+  it("has a button with ✘ as text", () => {
+    const button = wrapper.find(".removeTodo");
+    expect(button.text()).toEqual("✘");
   });
 });
