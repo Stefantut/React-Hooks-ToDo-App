@@ -1,9 +1,8 @@
 **_ Todo App - 2020 _**
-**_ Built with RCA _**
 
 ![Preview Image](src/todo.jpg)
 
-# Simple ToDo List app Built using React Hooks, Jest/Enzyme for testing components, and PropTypes.
+## Simple ToDo List app Built using React Hooks and Jest/Enzyme for testing components.
 
 ## Available Scripts
 
